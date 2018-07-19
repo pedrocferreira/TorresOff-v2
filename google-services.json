@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "997355009826",
+    "firebase_url": "https://my-project-1501625427178.firebaseio.com",
+    "project_id": "my-project-1501625427178",
+    "storage_bucket": "my-project-1501625427178.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997355009826:android:9e0226860d7e71b1",
+        "android_client_info": {
+          "package_name": "com.torresoff.br"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997355009826-f65ho23c63fdic6f62mhtujtodi6gjg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCndlm4wEriLFkLSZ5do6w4t1hfsMhwDHk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

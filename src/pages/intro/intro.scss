@@ -1,0 +1,30 @@
+page-intro {
+    ion-slide{
+        text-align: center
+    }
+    h1{
+        position: absolute;
+        top: 5%;
+        left: 10%;
+    }
+    .img_slide img {
+        width:300px;
+        
+
+    }
+    .img_slidee{
+        width: 10px;
+    }
+
+    ion-item{
+        width: 200px;
+    }
+    .bt{
+        position: absolute;
+        right: 40px;
+    }
+    h2{
+        position: relative;
+        top: -80px;
+    }
+}

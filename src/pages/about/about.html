@@ -1,0 +1,86 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Parceiros
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<br>
+<br>
+<br>
+<br>
+
+<ion-content padding class="bgg" >
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content  pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list *ngFor="let parceiros of parceiros">
+
+
+  <ion-item >
+    
+    <ion-avatar item-start>
+      <img src="{{ parceiros.avatar }}" #myImage1 (click)="presentImage(myImage1)">
+    </ion-avatar>
+    <h2>{{parceiros.nome}}</h2>
+  </ion-item>
+  
+
+<ion-slides pager>
+
+  <ion-slide >
+    <img src="{{ parceiros.url1 }}" #myImage2 (click)="presentImage(myImage2)">
+  </ion-slide>
+
+<ion-slide>
+  <img src="{{ parceiros.url2 }}"  #myImage3 (click)="presentImage(myImage3)">
+</ion-slide>
+
+<ion-slide>
+  <img src="{{ parceiros.url3 }}" #myImage4 (click)="presentImage(myImage4)">
+</ion-slide>
+
+</ion-slides>
+
+  <ion-card-content class="parceiros-card">
+   
+      <p>{{ parceiros.descricao }}  </p>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small (click)="wp(parceiros.whatsurl)" >
+              <ion-icon name="logo-whatsapp" ></ion-icon>
+              
+            <a  >               
+                <div>WhatsApp</div>
+           </a>
+
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small (click)= "map(parceiros.endereco)">
+              <ion-icon name="map"></ion-icon>
+              <div>Mapa</div>
+            </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              {{parceiros.cidade}}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+  </ion-card-content>
+
+
+</ion-list>
+
+<ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
+  <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>
+
+
+

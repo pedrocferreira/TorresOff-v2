@@ -1,0 +1,46 @@
+<!--
+  Generated template for the ListaMercadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Mercados</ion-title>
+   <ion-icon   ></ion-icon>
+  </ion-navbar>
+
+</ion-header>
+
+  <ion-content class="card-background-page">
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content  pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."></ion-refresher-content>
+      </ion-refresher>
+
+    
+        <ion-list>
+          
+      <ion-item *ngFor="let mercado of mercados" class="card-background-page">
+        <ion-thumbnail item-start (click)="goToFolder(mercado.id, mercado.url1,mercado.url2, mercado.url3, mercado.url4, mercado.url5, mercado.url6, mercado.url7,
+        mercado.url8, mercado.nome, mercado.endereco)">
+          <img src={{mercado.avatar}} (click)="goToFolder(mercado.id, mercado.url1,mercado.url2, mercado.url3, mercado.url4, mercado.url5, mercado.url6, mercado.url7,
+          mercado.url8, mercado.nome, mercado.endereco)">
+        </ion-thumbnail>
+        <h2 (click)="goToFolder(mercado.id, mercado.url1,mercado.url2, mercado.url3, mercado.url4, mercado.url5, mercado.url6, mercado.url7,
+        mercado.url8, mercado.nome, mercado.endereco)"> {{mercado.nome}} </h2>
+        <p (click)="goToFolder(mercado.id, mercado.url1,mercado.url2, mercado.url3, mercado.url4, mercado.url5, mercado.url6, mercado.url7,
+        mercado.url8, mercado.nome, mercado.endereco)">{{mercado.endereco }} </p>
+        <p (click)="goToFolder(mercado.id, mercado.url1,mercado.url2, mercado.url3, mercado.url4, mercado.url5, mercado.url6, mercado.url7,
+        mercado.url8,mercado.nome, mercado.endereco)">Vencimento:<b><span style="color:#e74c3c"> {{mercado.vencimento}} </span></b></p>
+        <button ion-button clear item-end (click)="goToFolder(mercado.id, mercado.url1,mercado.url2, mercado.url3, mercado.url4, mercado.url5, mercado.url6, mercado.url7,
+        mercado.url8, mercado.nome, mercado.endereco)" >Abrir</button>
+      </ion-item>
+
+ 
+    </ion-list>
+    
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  </ion-content>

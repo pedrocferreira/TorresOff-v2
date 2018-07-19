@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> {{ nome }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <div *ngFor="let img of imagens"  >
+   
+      <img   src="{{ img }}"  class="thumb-img" #myImage (click)="presentImage(myImage)" >
+
+</div>
+<h5>{{ endereco }}</h5>
+
+    
+
+  
+</ion-content>
